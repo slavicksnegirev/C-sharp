@@ -1,0 +1,997 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CairoSharp.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:CairoSharp.Extensions.Arrows.Arrow">
+            <summary>
+            A arrow or vector.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.Arrows.Arrow._length">
+            <summary>
+            Length of arrow head.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.Arrows.Arrow._angle">
+            <summary>
+            Half arrow head opening angle in radiants.
+            </summary>
+        </member>
+        <member name="P:CairoSharp.Extensions.Arrows.Arrow.ArrowPoints">
+            <summary>
+            The <see cref="T:Cairo.PointD"/>s constructing the arrow head.
+            </summary>
+            <remarks>
+            The head is at (0,0) and the ends at (-l, l.tan(a)) respective (-l, -l.tan(a)).
+            Therefore the points have to be brought by transformation to the correct place.
+            </remarks>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.Arrow.#ctor(System.Double,System.Double)">
+            <summary>
+            Creates a <see cref="T:CairoSharp.Extensions.Arrows.Arrow" />.
+            </summary>
+            <param name="length">Length of the arrow head.</param>
+            <param name="angle">Half arrow head opening angle in degrees.</param>
+            <remarks>
+            The absolut values of <paramref name="length" /> and <paramref name="angle" />
+            are used, no exception is thrown.
+            </remarks>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.Arrow.DrawVector(Cairo.Context,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draws a vector, i.e. an arrow with arrow head.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="x0">The x-coordinate of the start-point.</param>
+            <param name="y0">The y-coordinate of the start-point.</param>
+            <param name="x1">The x-coordinate of the end-point.</param>
+            <param name="y1">The y-coordinate of the end-point.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="context" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.Arrow.DrawVector(Cairo.Context,Cairo.PointD,Cairo.PointD)">
+            <summary>
+            Draws a vector, i.e. an arrow with arrow head.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="start">Start-point.</param>
+            <param name="end">End-point.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="context" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.Arrow.DrawArrow(Cairo.Context,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draws an arrow.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="x0">The x-coordinate of the start-point.</param>
+            <param name="y0">The y-coordinate of the start-point.</param>
+            <param name="x1">The x-coordinate of the end-point.</param>
+            <param name="y1">The y-coordinate of the end-point.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="context" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.Arrow.DrawArrow(Cairo.Context,Cairo.PointD,Cairo.PointD)">
+            <summary>
+            Draws an arrow.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="start">Start-point.</param>
+            <param name="end">End-point.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="context" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.Arrow.DrawArrowHead(Cairo.Context)">
+            <summary>
+            Draws the arrow head.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+        </member>
+        <member name="T:CairoSharp.Extensions.Arrows.CircleArrow">
+            <summary>
+            An arrow with a circle as head.
+            </summary>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.CircleArrow.#ctor(System.Double)">
+            <summary>
+            Creates a <see cref="T:CairoSharp.Extensions.Arrows.CircleArrow" />.
+            </summary>
+            <param name="radius">The radius of the arrow head's circle.</param>
+            <remarks>
+            The absolut value is used, no exception is thrown on negative values.
+            </remarks>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.CircleArrow.DrawArrowHead(Cairo.Context)">
+            <summary>
+            Draws the arrow head.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+        </member>
+        <member name="T:CairoSharp.Extensions.Arrows.OpenArrow">
+            <summary>
+            A arrow or vector, where the arrow head is not filled (only the outline).
+            </summary>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.OpenArrow.#ctor(System.Double,System.Double)">
+            <summary>
+            Creates a <see cref="T:CairoSharp.Extensions.Arrows.Arrow" />.
+            </summary>
+            <param name="length">Length of the arrow head.</param>
+            <param name="angle">Half arrow head opening angle in degrees.</param>
+            <remarks>
+            The absolut values of <paramref name="length" /> and <paramref name="angle" />
+            are used, no exception is thrown.
+            </remarks>
+        </member>
+        <member name="M:CairoSharp.Extensions.Arrows.OpenArrow.DrawArrowHead(Cairo.Context)">
+            <summary>
+            Draws the arrow head.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+        </member>
+        <member name="T:CairoSharp.Extensions.ContextExtensions">
+            <summary>
+            Extension methods for <see cref="T:Cairo.Context" />.
+            </summary>
+        </member>
+        <member name="M:CairoSharp.Extensions.ContextExtensions.Circle(Cairo.Context,System.Double,System.Double,System.Double)">
+            <summary>
+            Draws a circle.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="radius">The radius.</param>
+            <param name="x">The x-coordinate of the center.</param>
+            <param name="y">The y-coordinate of the center.</param>
+        </member>
+        <member name="M:CairoSharp.Extensions.ContextExtensions.Square(Cairo.Context,System.Double,System.Double,System.Double)">
+            <summary>
+            Draws a square.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="length">The side lenght of the square.</param>
+            <param name="x">The x-coordinate of the center.</param>
+            <param name="y">The y-coordinate of the center.</param>
+        </member>
+        <member name="M:CairoSharp.Extensions.ContextExtensions.Hexagon(Cairo.Context,System.Double,System.Double,System.Double)">
+            <summary>
+            Draws a hexagon.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="cellSize">The cellsize (inner circle) of the hexagon.</param>
+            <param name="x">The x-coordinate of the center.</param>
+            <param name="y">The y-coordinate of the center.</param>
+        </member>
+        <member name="T:CairoSharp.Extensions.KnownColors">
+            <summary>
+            Predefined colors.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.AliceBlue">
+            <summary>
+            AliceBlue -- ARGB value of #FFF0F8FF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.AntiqueWhite">
+            <summary>
+            AntiqueWhite -- ARGB value of #FFFAEBD7.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Aqua">
+            <summary>
+            Aqua -- ARGB value of #FF00FFFF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Aquamarine">
+            <summary>
+            Aquamarine -- ARGB value of #FF7FFFD4.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Azure">
+            <summary>
+            Azure -- ARGB value of #FFF0FFFF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Beige">
+            <summary>
+            Beige -- ARGB value of #FFF5F5DC.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Bisque">
+            <summary>
+            Bisque -- ARGB value of #FFFFE4C4.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Black">
+            <summary>
+            Black -- ARGB value of #FF000000.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.BlanchedAlmond">
+            <summary>
+            BlanchedAlmond -- ARGB value of #FFFFEBCD.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Blue">
+            <summary>
+            Blue -- ARGB value of #FF0000FF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.BlueViolet">
+            <summary>
+            BlueViolet -- ARGB value of #FF8A2BE2.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Brown">
+            <summary>
+            Brown -- ARGB value of #FFA52A2A.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.BurlyWood">
+            <summary>
+            BurlyWood -- ARGB value of #FFDEB887.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.CadetBlue">
+            <summary>
+            CadetBlue -- ARGB value of #FF5F9EA0.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Chartreuse">
+            <summary>
+            Chartreuse -- ARGB value of #FF7FFF00.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Chocolate">
+            <summary>
+            Chocolate -- ARGB value of #FFD2691E.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Coral">
+            <summary>
+            Coral -- ARGB value of #FFFF7F50.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.CornflowerBlue">
+            <summary>
+            CornflowerBlue -- ARGB value of #FF6495ED.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Cornsilk">
+            <summary>
+            Cornsilk -- ARGB value of #FFFFF8DC.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Crimson">
+            <summary>
+            Crimson -- ARGB value of #FFDC143C.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Cyan">
+            <summary>
+            Cyan -- ARGB value of #FF00FFFF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkBlue">
+            <summary>
+            DarkBlue -- ARGB value of #FF00008B.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkCyan">
+            <summary>
+            DarkCyan -- ARGB value of #FF008B8B.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkGoldenrod">
+            <summary>
+            DarkGoldenrod -- ARGB value of #FFB8860B.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkGray">
+            <summary>
+            DarkGray -- ARGB value of #FFA9A9A9.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkGreen">
+            <summary>
+            DarkGreen -- ARGB value of #FF006400.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkKhaki">
+            <summary>
+            DarkKhaki -- ARGB value of #FFBDB76B.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkMagenta">
+            <summary>
+            DarkMagenta -- ARGB value of #FF8B008B.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkOliveGreen">
+            <summary>
+            DarkOliveGreen -- ARGB value of #FF556B2F.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkOrange">
+            <summary>
+            DarkOrange -- ARGB value of #FFFF8C00.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkOrchid">
+            <summary>
+            DarkOrchid -- ARGB value of #FF9932CC.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkRed">
+            <summary>
+            DarkRed -- ARGB value of #FF8B0000.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkSalmon">
+            <summary>
+            DarkSalmon -- ARGB value of #FFE9967A.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkSeaGreen">
+            <summary>
+            DarkSeaGreen -- ARGB value of #FF8FBC8F.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkSlateBlue">
+            <summary>
+            DarkSlateBlue -- ARGB value of #FF483D8B.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkSlateGray">
+            <summary>
+            DarkSlateGray -- ARGB value of #FF2F4F4F.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkTurquoise">
+            <summary>
+            DarkTurquoise -- ARGB value of #FF00CED1.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DarkViolet">
+            <summary>
+            DarkViolet -- ARGB value of #FF9400D3.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DeepPink">
+            <summary>
+            DeepPink -- ARGB value of #FFFF1493.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DeepSkyBlue">
+            <summary>
+            DeepSkyBlue -- ARGB value of #FF00BFFF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DimGray">
+            <summary>
+            DimGray -- ARGB value of #FF696969.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.DodgerBlue">
+            <summary>
+            DodgerBlue -- ARGB value of #FF1E90FF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Firebrick">
+            <summary>
+            Firebrick -- ARGB value of #FFB22222.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.FloralWhite">
+            <summary>
+            FloralWhite -- ARGB value of #FFFFFAF0.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.ForestGreen">
+            <summary>
+            ForestGreen -- ARGB value of #FF228B22.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Fuchsia">
+            <summary>
+            Fuchsia -- ARGB value of #FFFF00FF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Gainsboro">
+            <summary>
+            Gainsboro -- ARGB value of #FFDCDCDC.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.GhostWhite">
+            <summary>
+            GhostWhite -- ARGB value of #FFF8F8FF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Gold">
+            <summary>
+            Gold -- ARGB value of #FFFFD700.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Goldenrod">
+            <summary>
+            Goldenrod -- ARGB value of #FFDAA520.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Gray">
+            <summary>
+            Gray -- ARGB value of #FF808080.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Green">
+            <summary>
+            Green -- ARGB value of #FF008000.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.GreenYellow">
+            <summary>
+            GreenYellow -- ARGB value of #FFADFF2F.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Honeydew">
+            <summary>
+            Honeydew -- ARGB value of #FFF0FFF0.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.HotPink">
+            <summary>
+            HotPink -- ARGB value of #FFFF69B4.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.IndianRed">
+            <summary>
+            IndianRed -- ARGB value of #FFCD5C5C.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Indigo">
+            <summary>
+            Indigo -- ARGB value of #FF4B0082.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Ivory">
+            <summary>
+            Ivory -- ARGB value of #FFFFFFF0.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Khaki">
+            <summary>
+            Khaki -- ARGB value of #FFF0E68C.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Lavender">
+            <summary>
+            Lavender -- ARGB value of #FFE6E6FA.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LavenderBlush">
+            <summary>
+            LavenderBlush -- ARGB value of #FFFFF0F5.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LawnGreen">
+            <summary>
+            LawnGreen -- ARGB value of #FF7CFC00.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LemonChiffon">
+            <summary>
+            LemonChiffon -- ARGB value of #FFFFFACD.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightBlue">
+            <summary>
+            LightBlue -- ARGB value of #FFADD8E6.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightCoral">
+            <summary>
+            LightCoral -- ARGB value of #FFF08080.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightCyan">
+            <summary>
+            LightCyan -- ARGB value of #FFE0FFFF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightGoldenrodYellow">
+            <summary>
+            LightGoldenrodYellow -- ARGB value of #FFFAFAD2.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightGray">
+            <summary>
+            LightGray -- ARGB value of #FFD3D3D3.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightGreen">
+            <summary>
+            LightGreen -- ARGB value of #FF90EE90.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightPink">
+            <summary>
+            LightPink -- ARGB value of #FFFFB6C1.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightSalmon">
+            <summary>
+            LightSalmon -- ARGB value of #FFFFA07A.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightSeaGreen">
+            <summary>
+            LightSeaGreen -- ARGB value of #FF20B2AA.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightSkyBlue">
+            <summary>
+            LightSkyBlue -- ARGB value of #FF87CEFA.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightSlateGray">
+            <summary>
+            LightSlateGray -- ARGB value of #FF778899.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightSteelBlue">
+            <summary>
+            LightSteelBlue -- ARGB value of #FFB0C4DE.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LightYellow">
+            <summary>
+            LightYellow -- ARGB value of #FFFFFFE0.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Lime">
+            <summary>
+            Lime -- ARGB value of #FF00FF00.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.LimeGreen">
+            <summary>
+            LimeGreen -- ARGB value of #FF32CD32.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Linen">
+            <summary>
+            Linen -- ARGB value of #FFFAF0E6.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Magenta">
+            <summary>
+            Magenta -- ARGB value of #FFFF00FF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Maroon">
+            <summary>
+            Maroon -- ARGB value of #FF800000.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MediumAquamarine">
+            <summary>
+            MediumAquamarine -- ARGB value of #FF66CDAA.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MediumBlue">
+            <summary>
+            MediumBlue -- ARGB value of #FF0000CD.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MediumOrchid">
+            <summary>
+            MediumOrchid -- ARGB value of #FFBA55D3.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MediumPurple">
+            <summary>
+            MediumPurple -- ARGB value of #FF9370DB.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MediumSeaGreen">
+            <summary>
+            MediumSeaGreen -- ARGB value of #FF3CB371.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MediumSlateBlue">
+            <summary>
+            MediumSlateBlue -- ARGB value of #FF7B68EE.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MediumSpringGreen">
+            <summary>
+            MediumSpringGreen -- ARGB value of #FF00FA9A.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MediumTurquoise">
+            <summary>
+            MediumTurquoise -- ARGB value of #FF48D1CC.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MediumVioletRed">
+            <summary>
+            MediumVioletRed -- ARGB value of #FFC71585.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MidnightBlue">
+            <summary>
+            MidnightBlue -- ARGB value of #FF191970.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MintCream">
+            <summary>
+            MintCream -- ARGB value of #FFF5FFFA.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.MistyRose">
+            <summary>
+            MistyRose -- ARGB value of #FFFFE4E1.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Moccasin">
+            <summary>
+            Moccasin -- ARGB value of #FFFFE4B5.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.NavajoWhite">
+            <summary>
+            NavajoWhite -- ARGB value of #FFFFDEAD.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Navy">
+            <summary>
+            Navy -- ARGB value of #FF000080.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.OldLace">
+            <summary>
+            OldLace -- ARGB value of #FFFDF5E6.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Olive">
+            <summary>
+            Olive -- ARGB value of #FF808000.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.OliveDrab">
+            <summary>
+            OliveDrab -- ARGB value of #FF6B8E23.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Orange">
+            <summary>
+            Orange -- ARGB value of #FFFFA500.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.OrangeRed">
+            <summary>
+            OrangeRed -- ARGB value of #FFFF4500.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Orchid">
+            <summary>
+            Orchid -- ARGB value of #FFDA70D6.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.PaleGoldenrod">
+            <summary>
+            PaleGoldenrod -- ARGB value of #FFEEE8AA.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.PaleGreen">
+            <summary>
+            PaleGreen -- ARGB value of #FF98FB98.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.PaleTurquoise">
+            <summary>
+            PaleTurquoise -- ARGB value of #FFAFEEEE.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.PaleVioletRed">
+            <summary>
+            PaleVioletRed -- ARGB value of #FFDB7093.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.PapayaWhip">
+            <summary>
+            PapayaWhip -- ARGB value of #FFFFEFD5.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.PeachPuff">
+            <summary>
+            PeachPuff -- ARGB value of #FFFFDAB9.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Peru">
+            <summary>
+            Peru -- ARGB value of #FFCD853F.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Pink">
+            <summary>
+            Pink -- ARGB value of #FFFFC0CB.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Plum">
+            <summary>
+            Plum -- ARGB value of #FFDDA0DD.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.PowderBlue">
+            <summary>
+            PowderBlue -- ARGB value of #FFB0E0E6.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Purple">
+            <summary>
+            Purple -- ARGB value of #FF800080.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Red">
+            <summary>
+            Red -- ARGB value of #FFFF0000.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.RosyBrown">
+            <summary>
+            RosyBrown -- ARGB value of #FFBC8F8F.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.RoyalBlue">
+            <summary>
+            RoyalBlue -- ARGB value of #FF4169E1.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.SaddleBrown">
+            <summary>
+            SaddleBrown -- ARGB value of #FF8B4513.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Salmon">
+            <summary>
+            Salmon -- ARGB value of #FFFA8072.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.SandyBrown">
+            <summary>
+            SandyBrown -- ARGB value of #FFF4A460.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.SeaGreen">
+            <summary>
+            SeaGreen -- ARGB value of #FF2E8B57.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.SeaShell">
+            <summary>
+            SeaShell -- ARGB value of #FFFFF5EE.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Sienna">
+            <summary>
+            Sienna -- ARGB value of #FFA0522D.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Silver">
+            <summary>
+            Silver -- ARGB value of #FFC0C0C0.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.SkyBlue">
+            <summary>
+            SkyBlue -- ARGB value of #FF87CEEB.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.SlateBlue">
+            <summary>
+            SlateBlue -- ARGB value of #FF6A5ACD.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.SlateGray">
+            <summary>
+            SlateGray -- ARGB value of #FF708090.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Snow">
+            <summary>
+            Snow -- ARGB value of #FFFFFAFA.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.SpringGreen">
+            <summary>
+            SpringGreen -- ARGB value of #FF00FF7F.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.SteelBlue">
+            <summary>
+            SteelBlue -- ARGB value of #FF4682B4.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Tan">
+            <summary>
+            Tan -- ARGB value of #FFD2B48C.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Teal">
+            <summary>
+            Teal -- ARGB value of #FF008080.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Thistle">
+            <summary>
+            Thistle -- ARGB value of #FFD8BFD8.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Tomato">
+            <summary>
+            Tomato -- ARGB value of #FFFF6347.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Transparent">
+            <summary>
+            Transparent
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Turquoise">
+            <summary>
+            Turquoise -- ARGB value of #FF40E0D0.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Violet">
+            <summary>
+            Violet -- ARGB value of #FFEE82EE.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Wheat">
+            <summary>
+            Wheat -- ARGB value of #FFF5DEB3.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.White">
+            <summary>
+            White -- ARGB value of #FFFFFFFF.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.WhiteSmoke">
+            <summary>
+            WhiteSmoke -- ARGB value of #FFF5F5F5.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.Yellow">
+            <summary>
+            Yellow -- ARGB value of #FFFFFF00.
+            </summary>
+        </member>
+        <member name="F:CairoSharp.Extensions.KnownColors.YellowGreen">
+            <summary>
+            YellowGreen -- ARGB value of #FF9ACD32.
+            </summary>
+        </member>
+        <member name="T:CairoSharp.Extensions.Shapes.Circle">
+            <summary>
+            A circle shape.
+            </summary>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Circle.#ctor(System.Double)">
+            <summary>Creates a circle with given radius.</summary>
+            <param name="radius">The radius.</param>
+            <remarks>
+            When <paramref name="radius" /> is negative, the absolute value
+            gets used, no exception is thrown.
+            </remarks>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Circle.MakePath(Cairo.Context,System.Double,System.Double)">
+            <summary>
+            Draws the shape.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="x">The x-coordinate of the center.</param>
+            <param name="y">The y-coordinate of the center.</param>
+        </member>
+        <member name="T:CairoSharp.Extensions.Shapes.Hexagon">
+            <summary>
+            A hexagon shape.
+            </summary>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Hexagon.#ctor(System.Double)">
+            <summary>
+            Creates a hexagon with given cellsize (inner circle).
+            </summary>
+            <param name="cellSize">The cellsize (inner circle) of the hexagon.</param>
+            <remarks>
+            When <paramref name="cellSize" /> is negative, the absolute value
+            gets used, no exception is thrown.
+            </remarks>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Hexagon.MakePath(Cairo.Context,System.Double,System.Double)">
+            <summary>
+            Draws the shape.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="x">The x-coordinate of the center.</param>
+            <param name="y">The y-coordinate of the center.</param>
+        </member>
+        <member name="T:CairoSharp.Extensions.Shapes.Shape">
+            <summary>
+            A base implementation of a shape.
+            </summary>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Shape.Draw(Cairo.Context,System.Double,System.Double)">
+            <summary>
+            Draws the oultine of the shape.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="centerX">The x-coordinate of the center.</param>
+            <param name="centerY">The y-coordinate of the center.</param>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Shape.Draw(Cairo.Context,System.Double,System.Double,Cairo.Color)">
+            <summary>
+            Draws the oultine of the shape with the given <see cref="T:Cairo.Color" />.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="centerX">The x-coordinate of the center.</param>
+            <param name="centerY">The y-coordinate of the center.</param>
+            <param name="color">
+            The colour of the outline. Components must be given in the range [0,1].
+            </param>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Shape.Fill(Cairo.Context,System.Double,System.Double)">
+            <summary>
+            Fills the shape.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="centerX">The x-coordinate of the center.</param>
+            <param name="centerY">The y-coordinate of the center.</param>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Shape.Fill(Cairo.Context,System.Double,System.Double,Cairo.Color)">
+            <summary>
+            Fills the shape with the given <see cref="T:Cairo.Color" />.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="centerX">The x-coordinate of the center.</param>
+            <param name="centerY">The y-coordinate of the center.</param>
+            <param name="color">
+            The colour of the outline. Components must be given in the range [0,1].
+            </param>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Shape.MakePath(Cairo.Context,System.Double,System.Double)">
+            <summary>
+            Draws the shape.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="x">The x-coordinate of the center.</param>
+            <param name="y">The y-coordinate of the center.</param>
+        </member>
+        <member name="T:CairoSharp.Extensions.Shapes.Square">
+            <summary>
+            A square shape.
+            </summary>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Square.#ctor(System.Double)">
+            <summary>Creates a square with given side length.</summary>
+            <param name="length">The side lenght of the square.</param>
+            <remarks>
+            When <paramref name="length" /> is negative, the absolute value
+            gets used, no exception is thrown.
+            </remarks>
+        </member>
+        <member name="M:CairoSharp.Extensions.Shapes.Square.MakePath(Cairo.Context,System.Double,System.Double)">
+            <summary>
+            Draws the shape.
+            </summary>
+            <param name="context">The <see cref="T:Cairo.Context" /></param>
+            <param name="x">The x-coordinate of the center.</param>
+            <param name="y">The y-coordinate of the center.</param>
+        </member>
+    </members>
+</doc>

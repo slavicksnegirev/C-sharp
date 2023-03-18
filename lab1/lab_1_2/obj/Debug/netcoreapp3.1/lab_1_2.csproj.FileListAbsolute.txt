@@ -1,0 +1,13 @@
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/bin/Debug/netcoreapp3.1/lab_1_2.deps.json
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/bin/Debug/netcoreapp3.1/lab_1_2.runtimeconfig.json
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/bin/Debug/netcoreapp3.1/lab_1_2.runtimeconfig.dev.json
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/bin/Debug/netcoreapp3.1/lab_1_2.dll
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/bin/Debug/netcoreapp3.1/lab_1_2.pdb
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/obj/Debug/netcoreapp3.1/lab_1_2.csproj.AssemblyReference.cache
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/obj/Debug/netcoreapp3.1/lab_1_2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/obj/Debug/netcoreapp3.1/lab_1_2.AssemblyInfoInputs.cache
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/obj/Debug/netcoreapp3.1/lab_1_2.AssemblyInfo.cs
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/obj/Debug/netcoreapp3.1/lab_1_2.csproj.CoreCompileInputs.cache
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/obj/Debug/netcoreapp3.1/lab_1_2.dll
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/obj/Debug/netcoreapp3.1/lab_1_2.pdb
+/Users/slavick.snegirevicloud.com/Projects/lab_1/lab_1_2/obj/Debug/netcoreapp3.1/lab_1_2.genruntimeconfig.cache

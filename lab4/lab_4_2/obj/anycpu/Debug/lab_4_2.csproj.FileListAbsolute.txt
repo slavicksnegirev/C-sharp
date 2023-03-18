@@ -1,0 +1,10 @@
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/bin/Debug/lab_4_2.exe
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/bin/Debug/lab_4_2.pdb
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/obj/anycpu/Debug/lab_4_2.csproj.AssemblyReference.cache
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/obj/anycpu/Debug/lab_4_2.csproj.CoreCompileInputs.cache
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/obj/anycpu/Debug/lab_4_2.exe
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/obj/anycpu/Debug/lab_4_2.pdb
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/bin/Debug/CairoSharp.dll
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/bin/Debug/CairoSharp.Extensions.dll
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/bin/Debug/CairoSharp.Extensions.xml
+/Users/slavick.snegirevicloud.com/Projects/lab_4/lab_4_2/obj/anycpu/Debug/lab_4_2.csproj.CopyComplete

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>lab_4_1</id>
+    <version>1.0.0</version>
+    <authors>lab_4_1</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/slavick.snegirevicloud.com/Desktop/ЯВУ/lab_4_1/lab_4_1/bin/Debug/net5.0/lab_4_1.runtimeconfig.json" target="lib/net5.0/lab_4_1.runtimeconfig.json" />
+    <file src="/Users/slavick.snegirevicloud.com/Desktop/ЯВУ/lab_4_1/lab_4_1/bin/Debug/net5.0/lab_4_1.dll" target="lib/net5.0/lab_4_1.dll" />
+  </files>
+</package>

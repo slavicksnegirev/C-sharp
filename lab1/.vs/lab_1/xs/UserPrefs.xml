@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{C379646C-A448-4F5C-87DD-D4DE378DB926}|Default">
+  <MonoDevelop.Ide.ItemProperties.lab__1__1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="lab_1_3/Program.cs">
+    <Files>
+      <File FileName="lab_1_3/Coffee.cs" Line="13" Column="1" />
+      <File FileName="lab_1_3/IElement.cs" Line="1" Column="1" />
+      <File FileName="lab_1_3/IBreakfastDrink.cs" Line="1" Column="1" />
+      <File FileName="lab_1_3/Tea.cs" Line="1" Column="1" />
+      <File FileName="lab_1_3/Black.cs" Line="1" Column="1" />
+      <File FileName="lab_1_3/Green.cs" Line="1" Column="1" />
+      <File FileName="lab_1_3/Karkade.cs" Line="1" Column="1" />
+      <File FileName="lab_1_3/LapsangSouchong.cs" Line="1" Column="1" />
+      <File FileName="lab_1_3/Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab_1" expanded="True">
+            <Node name="lab_1_2" expanded="True" />
+            <Node name="lab_1_3" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.lab__1__3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.lab__1__2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
